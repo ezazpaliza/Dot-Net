@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practical2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter The Weight(Kg):");
+            int Weight = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter The Distance(Km):");
+            int Distance = int.Parse(Console.ReadLine());
+
+            if (Distance <= 100)
+            {
+                Console.Write("Service Cgharges of Goods To transfer Fron Source to Destinition Are " +Weight * 50+ " Rs");
+            }
+
+            else if (Distance >= 100 && Distance<=200)
+            {
+                Console.Write("Service Cgharges of Goods To transfer Fron Source to Destinition Are " +Weight * 65+ " Rs");
+            }
+
+            else if (Distance >= 200 && Distance<=300)
+            {
+                Console.Write("Service Cgharges of Goods To transfer Fron Source to Destinition Are " +Weight * 90+ " Rs");
+            }
+
+            else if (Distance >= 300)
+            {
+                Console.Write("Service Cgharges of Goods To transfer Fron Source to Destinition Are " +Weight * 120+ " Rs");
+            }
+
+            else
+            {
+                Console.Write("You Entered a Wrong Input");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
