@@ -1,0 +1,27 @@
+using System;
+
+class Example
+{
+    int _number;
+    public int Number
+    {
+        get
+        {
+            return this._number;
+        }
+        set
+        {
+            this._number = value;
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Example example = new Example();
+        example.Number = 5; // set { }
+        Console.WriteLine(example.Number); // get { }
+    }
+}
