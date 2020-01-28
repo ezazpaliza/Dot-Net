@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practical_4
+{
+
+    class Student
+    {
+        private int rollno;
+        private String name;
+        private int age;
+
+        public string Name
+        {
+
+            get { return name; }
+
+            set { name = value; }
+
+        }
+        public int Rollno
+        {
+
+            get { return rollno; }
+
+            set { rollno = value; }
+
+        }
+        public int Age
+        {
+
+            get { return age; }
+
+            set { age = value; }
+
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Vlues set using Get and Set Propity");
+            Student student = new Student();
+            student.Rollno = 5;
+            Console.WriteLine("Your Rollno  = " + student.Rollno);
+
+            student.Age = 20;
+            Console.WriteLine("Your Age  = " + student.Age);
+
+            student.Name = "Ezaz";
+            Console.WriteLine("Your name  = "+student.Name);
+
+            Console.ReadLine();
+        }
+    }
+}
