@@ -1,0 +1,67 @@
+using System;
+using System.IO;
+
+
+namespace Practical_5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int Ch=0;
+            while(Ch != 5){
+            Console.WriteLine("1>  write in to File :");
+            Console.WriteLine("2>  read in to File :");
+            Console.WriteLine("3>  Append in to File :");
+            Console.WriteLine("4>  Delete in to File :");
+            Console.WriteLine("5>  clean file :");
+            Console.WriteLine("5>  For Exit 0 :");
+            Ch = int.Parse(Console.ReadLine());
+
+            if (Ch == 1)
+            {
+            Console.WriteLine("Please enter new content for the file:");
+            string newContent = Console.ReadLine();
+            File.WriteAllText("C:/Users/spce/Desktop/SAVAN.txt", newContent);
+            }
+            else if (Ch == 2)
+            {
+                if (File.Exists("C:/Users/spce/Desktop/SAVAN.txt"))
+                {
+                    string Data = File.ReadAllText("C:/Users/spce/Desktop/SAVAN.txt");
+                    Console.WriteLine("Current content of file:");
+                    Console.WriteLine(Data);
+                }
+                else
+                {
+                    Console.WriteLine("File not Exists");
+                }
+
+            }
+            else if (Ch == 3)
+            {
+                Console.WriteLine("Please enter new content for the file:");
+                string newContent = Console.ReadLine();
+                File.AppendAllText("C:/Users/spce/Desktop/SAVAN.txt", newContent + Environment.NewLine);
+            }
+            else if (Ch == 4)
+            {
+               File.Delete("C:/Users/spce/Desktop/SAVAN.txt");    
+               Console.WriteLine("file is deleted."); 
+            }
+            else if (Ch == 4)
+            {
+                Console.WriteLine("Please enter new content for the file:");
+                string newContent = "";
+                File.WriteAllText("C:/Users/spce/Desktop/SAVAN.txt", newContent);
+            }
+
+
+
+            
+            }
+
+            Console.ReadLine();
+           }
+    }
+}
