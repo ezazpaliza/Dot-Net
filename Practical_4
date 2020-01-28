@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Practical_4
 {
@@ -16,17 +12,29 @@ namespace Practical_4
         public string Name
         {
 
-            get { return name; }
+            get 
+            { 
+                return name;
+            }
 
-            set { name = value; }
+            set
+            {
+                name = value; 
+            }
 
         }
         public int Rollno
         {
 
-            get { return rollno; }
+            get 
+            {
+                return rollno; 
+            }
 
-            set { rollno = value; }
+            set 
+            {
+                rollno = value;
+            }
 
         }
         public int Age
@@ -46,14 +54,17 @@ namespace Practical_4
         {
             Console.WriteLine("Vlues set using Get and Set Propity");
             Student student = new Student();
-            student.Rollno = 5;
-            Console.WriteLine("Your Rollno  = " + student.Rollno);
-
-            student.Age = 20;
-            Console.WriteLine("Your Age  = " + student.Age);
 
             student.Name = "Ezaz";
-            Console.WriteLine("Your name  = "+student.Name);
+            Console.WriteLine("Name  = " + student.Name);
+
+            student.Rollno = 22;
+            Console.WriteLine("Rollno  = " + student.Rollno);
+
+            student.Age = 20;
+            Console.WriteLine("Age  = " + student.Age);
+
+           
 
             Console.ReadLine();
         }
